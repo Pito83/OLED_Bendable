@@ -1,0 +1,122 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ST_OLED_BENDABLE
+</name>
+</assembly>
+<members>
+<member name="T:Controllo.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:Controllo.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:Controllo.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:Controllo.My.Resources.Resources._1465213051_ktip">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Controllo.My.Resources.Resources._1465213051_ktip_stop">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Controllo.My.Resources.Resources._1465213055_kfm_home">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Controllo.My.Resources.Resources._1489158481_photo">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Controllo.My.Resources.Resources._1489158935_Model">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Controllo.My.Resources.Resources._Single">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Controllo.My.Resources.Resources.G01541_IMPIANTO_ASSEMBLAGGIO_OLED_FLESSIBILE_Q7_Q9">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Controllo.My.Resources.Resources.Multi">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="M:Controllo.C_IBH.Read_Val(Controllo.C_IBH.PlcVar,System.Int32,System.Int32,System.UInt32,System.Int32@)">
+ <summary>
+ typ : 'E' = Input = 69d, 'A' Output = 65d, 'M' Flags = 77d, 'D' Datablock = 68d
+ nr: Start offset For Input/Output/Flags, For D the start offset within the DB
+ DBNr: Datablock number For typ = 'D' (68d), for Input/Output/Flags 0
+ size: 0..7 = The bit number within the byte read, 8 = Byte, 16 = Word, 32 = Doubleword
+ val: The value read from the PLC
+ Return Value: Successful operation returns S_OK, E_FAIL On Errors, E_ABORT If the PLC denies
+ access Or E_INVALIDARG if the desination Area in the PLC does Not exist Or Is too small.
+ 
+ </summary>
+ <returns></returns>
+</member>
+<member name="F:Controllo.Form_PARAMETRI.L_P_MA">
+ <summary>
+ Lista punti magazzino A
+ </summary>
+</member>
+<member name="F:Controllo.Form_PARAMETRI.L_P_MB">
+ <summary>
+ Lista punti magazzino B
+ </summary>
+</member>
+<member name="M:Controllo.Form_sinottico.MakeItClockOrNot(System.Windows.Forms.Label,System.Boolean,System.Boolean)">
+ <summary>
+ 'Image indexes => quadrato verde 0 / quadrato blu 3 / grigio 1
+        'Logica => se ho presenza => blu lampeggiante, se ho vuoto (dominante) => verde
+ </summary>
+ <param name="myLabel">My label.</param>
+ <param name="dominantBool">if set to <c>true</c> [dominant bool].</param>
+ <param name="slaveBool">if set to <c>true</c> [slave bool].</param>
+ <returns></returns>
+</member>
+<member name="M:Controllo.F_main.DecodificaVicinanzaViti(System.Boolean,System.Boolean)">
+ <summary>
+ Decodificas the vicinanza viti.
+ </summary>
+ 0 - Lontano 
+ 1 - Vicino
+ 2 - In posizione
+ -1 - Errore
+ <returns></returns>
+</member>
+<member name="F:Controllo.Module1.StatiPLC.PresenzaPezzoIncollaggio">
+ <summary>
+ INCOLLAGGIO_PRESENZA_PEZZI_NONE	    USInt	0
+ INCOLLAGGIO_PRESENZA_PEZZI_OLED	    USInt	1
+ INCOLLAGGIO_PRESENZA_PEZZI_OLED_OK	USInt	2
+ INCOLLAGGIO_PRESENZA_PEZZI_OLED_NOK	USInt	3
+ </summary>
+</member>
+<member name="F:Controllo.Module1.Device">
+ <summary>
+ The device => 1 SINISTRI / 2 DESTRI
+ </summary>
+</member>
+</members>
+</doc>
