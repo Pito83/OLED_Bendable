@@ -247,15 +247,9 @@ Public Class F_main
         End If
 
         Thread.Sleep(300)
-        If Not (_tread1 Is Nothing) Then
-            Me._tread1.Abort()
-        End If
-        If Not (_tread2 Is Nothing) Then
-            Me._tread2.Abort()
-        End If
-        If Not (_thini Is Nothing) Then
-            Me._thini.Abort()
-        End If
+        SafeJoinThread(_tread1, 1500)
+        SafeJoinThread(_tread2, 1500)
+        SafeJoinThread(_thini, 1500)
 
         If Plc1 IsNot Nothing Then
             Plc1.Disconnetti()
@@ -278,8 +272,16 @@ Public Class F_main
         Me.Dispose()
     End Sub
     Private Sub F_main_Disposed(sender As Object, e As EventArgs) Handles Me.Disposed
-        Dim pp As Process = Process.GetCurrentProcess
-        pp.Kill()
+        ' Evita una kill forzata del processo: la chiusura pulita rilascia meglio le risorse COM di IBH.
+    End Sub
+    Private Sub SafeJoinThread(ByVal th As Thread, ByVal timeoutMs As Integer)
+        If th Is Nothing Then Exit Sub
+        Try
+            If th.IsAlive Then
+                th.Join(timeoutMs)
+            End If
+        Catch
+        End Try
     End Sub
     Protected Overrides Sub OnPaint(ByVal e As System.Windows.Forms.PaintEventArgs)
         Lab_titolo.BackColor = Color.Lime ': Lab_titolo.Text = ""
@@ -862,6 +864,8 @@ Public Class F_main
 
         StatiMacchina.PreorientamentoDaFare = ReadBool(temp, 588, 0)
 
+        StatiMacchina.LetturaDatamatrixPcbAbilitato = ReadBool(temp, 588, 1)
+
 #Region "ANALOGICHE"
         StatiMacchina.VuotoFrameSx = ReadIntFrom_2Bytes(temp, 618)  'VALORI IN MILLIBAR
         StatiMacchina.VuotoSupportoSx = ReadIntFrom_2Bytes(temp, 610)
@@ -1228,7 +1232,7 @@ _ini:   If chiudo Then Exit Sub
                         'End If
                     End If
                     'Plc1.Write_Val(C_IBH.PlcVar.D, 23, 100, 6, CInt(False))   ' 'DB100.dbx23.6
-                    MessageBox.Show("Traccia DSM da IMPLEMENTARE")
+                    'MessageBox.Show("Traccia DSM da IMPLEMENTARE")
                 End If
                 _memTraceDSM = StatiMacchina.TracciaDSM
                 '-------test trasmissione dati a PLC------
@@ -2527,7 +2531,9 @@ _aa:    If chiudo Then Exit Sub
                     For i As Integer = 0 To arrayContaPezzi.Count() - 1
                         arrayContaPezzi(i) = 0
                     Next
-                    Plc2.Write_Vals(C_IBH.nArea.DB, 598, 100, arrayContaPezzi.Count(), arrayContaPezzi) 'Reset Pezzi Scarti                         
+                    Plc2.Write_Vals(C_IBH.nArea.DB, 598, 100, arrayContaPezzi.Count(), arrayContaPezzi) 'Reset Pezzi Scarti
+                Case 3
+                    Plc2.Write_Val(C_IBH.PlcVar.D, 588, 100, 1, CInt(Wr_Bool))   ' 'DB100.dbx588.1 LetturaDatamatrixPcbAbilitato
                 Case Else
 
             End Select

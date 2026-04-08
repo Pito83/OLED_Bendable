@@ -90,6 +90,15 @@ Partial Class Form_home
         Me.P_PsDx_Oled = New System.Windows.Forms.Label()
         Me.L_PosaggioSx = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.GroupBox8 = New System.Windows.Forms.GroupBox()
+        Me.LedScarto1 = New LBSoft.IndustrialCtrls.Leds.LBLed()
+        Me.LedScarto2 = New LBSoft.IndustrialCtrls.Leds.LBLed()
+        Me.LedScarto3 = New LBSoft.IndustrialCtrls.Leds.LBLed()
+        Me.LedScarto4 = New LBSoft.IndustrialCtrls.Leds.LBLed()
+        Me.LabScarto1 = New System.Windows.Forms.Label()
+        Me.LabScarto2 = New System.Windows.Forms.Label()
+        Me.LabScarto3 = New System.Windows.Forms.Label()
+        Me.LabScarto4 = New System.Windows.Forms.Label()
         Me.lblPlasmaturaOn = New LBSoft.IndustrialCtrls.Leds.LBLed()
         Me.lblAllNastri = New System.Windows.Forms.Label()
         Me.lblVuotoIncollaggioDx = New System.Windows.Forms.Label()
@@ -124,14 +133,6 @@ Partial Class Form_home
         Me.Label2 = New System.Windows.Forms.Label()
         Me.LbLed1 = New LBSoft.IndustrialCtrls.Leds.LBLed()
         Me.LbLed2 = New LBSoft.IndustrialCtrls.Leds.LBLed()
-        Me.LabScarto4 = New System.Windows.Forms.Label()
-        Me.LabScarto3 = New System.Windows.Forms.Label()
-        Me.LabScarto2 = New System.Windows.Forms.Label()
-        Me.LabScarto1 = New System.Windows.Forms.Label()
-        Me.LedScarto4 = New LBSoft.IndustrialCtrls.Leds.LBLed()
-        Me.LedScarto3 = New LBSoft.IndustrialCtrls.Leds.LBLed()
-        Me.LedScarto2 = New LBSoft.IndustrialCtrls.Leds.LBLed()
-        Me.LedScarto1 = New LBSoft.IndustrialCtrls.Leds.LBLed()
         Me.Lab_Scarti = New System.Windows.Forms.Label()
         Me.L_All_StAvvitatura = New System.Windows.Forms.Label()
         Me.LabNDx = New System.Windows.Forms.Label()
@@ -144,17 +145,19 @@ Partial Class Form_home
         Me.L_All_Rob = New System.Windows.Forms.Label()
         Me.L_MA_Fuori = New LBSoft.IndustrialCtrls.Leds.LBLed()
         Me.L_Barr = New LBSoft.IndustrialCtrls.Leds.LBLed()
-        Me.GroupBox8 = New System.Windows.Forms.GroupBox()
+        Me.lblLetturaDatamatrixPCB = New System.Windows.Forms.Label()
+        Me.GroupBox9 = New System.Windows.Forms.GroupBox()
         Me.GroupBox1.SuspendLayout()
         Me.IOT2.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        Me.GroupBox8.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
-        Me.GroupBox8.SuspendLayout()
+        Me.GroupBox9.SuspendLayout()
         Me.SuspendLayout()
         '
         'TimerClk
@@ -1047,6 +1050,7 @@ Partial Class Form_home
         Me.Panel1.BackColor = System.Drawing.Color.Silver
         Me.Panel1.BackgroundImage = Global.Controllo.My.Resources.Resources.G01541_IMPIANTO_ASSEMBLAGGIO_OLED_FLESSIBILE_Q7_Q9
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Panel1.Controls.Add(Me.GroupBox9)
         Me.Panel1.Controls.Add(Me.GroupBox8)
         Me.Panel1.Controls.Add(Me.lblPlasmaturaOn)
         Me.Panel1.Controls.Add(Me.lblAllNastri)
@@ -1079,6 +1083,131 @@ Partial Class Form_home
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1158, 806)
         Me.Panel1.TabIndex = 0
+        '
+        'GroupBox8
+        '
+        Me.GroupBox8.Controls.Add(Me.LedScarto1)
+        Me.GroupBox8.Controls.Add(Me.LedScarto2)
+        Me.GroupBox8.Controls.Add(Me.LedScarto3)
+        Me.GroupBox8.Controls.Add(Me.LedScarto4)
+        Me.GroupBox8.Controls.Add(Me.LabScarto1)
+        Me.GroupBox8.Controls.Add(Me.LabScarto2)
+        Me.GroupBox8.Controls.Add(Me.LabScarto3)
+        Me.GroupBox8.Controls.Add(Me.LabScarto4)
+        Me.GroupBox8.Location = New System.Drawing.Point(926, 26)
+        Me.GroupBox8.Name = "GroupBox8"
+        Me.GroupBox8.Size = New System.Drawing.Size(229, 105)
+        Me.GroupBox8.TabIndex = 279
+        Me.GroupBox8.TabStop = False
+        Me.GroupBox8.Text = "VASSOIO SCARTI"
+        '
+        'LedScarto1
+        '
+        Me.LedScarto1.BackColor = System.Drawing.Color.Transparent
+        Me.LedScarto1.BlinkInterval = 500
+        Me.LedScarto1.Label = ""
+        Me.LedScarto1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Top
+        Me.LedScarto1.LedColor = System.Drawing.Color.Purple
+        Me.LedScarto1.LedSize = New System.Drawing.SizeF(12.0!, 12.0!)
+        Me.LedScarto1.Location = New System.Drawing.Point(15, 29)
+        Me.LedScarto1.Name = "LedScarto1"
+        Me.LedScarto1.Renderer = Nothing
+        Me.LedScarto1.Size = New System.Drawing.Size(15, 15)
+        Me.LedScarto1.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off
+        Me.LedScarto1.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular
+        Me.LedScarto1.TabIndex = 242
+        '
+        'LedScarto2
+        '
+        Me.LedScarto2.BackColor = System.Drawing.Color.Transparent
+        Me.LedScarto2.BlinkInterval = 500
+        Me.LedScarto2.Label = ""
+        Me.LedScarto2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Top
+        Me.LedScarto2.LedColor = System.Drawing.Color.Purple
+        Me.LedScarto2.LedSize = New System.Drawing.SizeF(12.0!, 12.0!)
+        Me.LedScarto2.Location = New System.Drawing.Point(15, 46)
+        Me.LedScarto2.Name = "LedScarto2"
+        Me.LedScarto2.Renderer = Nothing
+        Me.LedScarto2.Size = New System.Drawing.Size(15, 15)
+        Me.LedScarto2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off
+        Me.LedScarto2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular
+        Me.LedScarto2.TabIndex = 243
+        '
+        'LedScarto3
+        '
+        Me.LedScarto3.BackColor = System.Drawing.Color.Transparent
+        Me.LedScarto3.BlinkInterval = 500
+        Me.LedScarto3.Label = ""
+        Me.LedScarto3.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Top
+        Me.LedScarto3.LedColor = System.Drawing.Color.Purple
+        Me.LedScarto3.LedSize = New System.Drawing.SizeF(12.0!, 12.0!)
+        Me.LedScarto3.Location = New System.Drawing.Point(15, 63)
+        Me.LedScarto3.Name = "LedScarto3"
+        Me.LedScarto3.Renderer = Nothing
+        Me.LedScarto3.Size = New System.Drawing.Size(15, 15)
+        Me.LedScarto3.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off
+        Me.LedScarto3.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular
+        Me.LedScarto3.TabIndex = 244
+        '
+        'LedScarto4
+        '
+        Me.LedScarto4.BackColor = System.Drawing.Color.Transparent
+        Me.LedScarto4.BlinkInterval = 500
+        Me.LedScarto4.Label = ""
+        Me.LedScarto4.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Top
+        Me.LedScarto4.LedColor = System.Drawing.Color.Purple
+        Me.LedScarto4.LedSize = New System.Drawing.SizeF(12.0!, 12.0!)
+        Me.LedScarto4.Location = New System.Drawing.Point(15, 80)
+        Me.LedScarto4.Name = "LedScarto4"
+        Me.LedScarto4.Renderer = Nothing
+        Me.LedScarto4.Size = New System.Drawing.Size(15, 15)
+        Me.LedScarto4.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off
+        Me.LedScarto4.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular
+        Me.LedScarto4.TabIndex = 245
+        '
+        'LabScarto1
+        '
+        Me.LabScarto1.AutoSize = True
+        Me.LabScarto1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.LabScarto1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabScarto1.Location = New System.Drawing.Point(30, 29)
+        Me.LabScarto1.Name = "LabScarto1"
+        Me.LabScarto1.Size = New System.Drawing.Size(29, 13)
+        Me.LabScarto1.TabIndex = 252
+        Me.LabScarto1.Text = "M-P"
+        '
+        'LabScarto2
+        '
+        Me.LabScarto2.AutoSize = True
+        Me.LabScarto2.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.LabScarto2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabScarto2.Location = New System.Drawing.Point(30, 46)
+        Me.LabScarto2.Name = "LabScarto2"
+        Me.LabScarto2.Size = New System.Drawing.Size(29, 13)
+        Me.LabScarto2.TabIndex = 253
+        Me.LabScarto2.Text = "M-P"
+        '
+        'LabScarto3
+        '
+        Me.LabScarto3.AutoSize = True
+        Me.LabScarto3.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.LabScarto3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabScarto3.Location = New System.Drawing.Point(30, 63)
+        Me.LabScarto3.Name = "LabScarto3"
+        Me.LabScarto3.Size = New System.Drawing.Size(29, 13)
+        Me.LabScarto3.TabIndex = 254
+        Me.LabScarto3.Text = "M-P"
+        '
+        'LabScarto4
+        '
+        Me.LabScarto4.AutoSize = True
+        Me.LabScarto4.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.LabScarto4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabScarto4.Location = New System.Drawing.Point(30, 82)
+        Me.LabScarto4.Name = "LabScarto4"
+        Me.LabScarto4.Size = New System.Drawing.Size(29, 13)
+        Me.LabScarto4.TabIndex = 255
+        Me.LabScarto4.Text = "M-P"
         '
         'lblPlasmaturaOn
         '
@@ -1537,114 +1666,6 @@ Partial Class Form_home
         Me.LbLed2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular
         Me.LbLed2.TabIndex = 263
         '
-        'LabScarto4
-        '
-        Me.LabScarto4.AutoSize = True
-        Me.LabScarto4.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.LabScarto4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabScarto4.Location = New System.Drawing.Point(30, 82)
-        Me.LabScarto4.Name = "LabScarto4"
-        Me.LabScarto4.Size = New System.Drawing.Size(29, 13)
-        Me.LabScarto4.TabIndex = 255
-        Me.LabScarto4.Text = "M-P"
-        '
-        'LabScarto3
-        '
-        Me.LabScarto3.AutoSize = True
-        Me.LabScarto3.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.LabScarto3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabScarto3.Location = New System.Drawing.Point(30, 63)
-        Me.LabScarto3.Name = "LabScarto3"
-        Me.LabScarto3.Size = New System.Drawing.Size(29, 13)
-        Me.LabScarto3.TabIndex = 254
-        Me.LabScarto3.Text = "M-P"
-        '
-        'LabScarto2
-        '
-        Me.LabScarto2.AutoSize = True
-        Me.LabScarto2.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.LabScarto2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabScarto2.Location = New System.Drawing.Point(30, 46)
-        Me.LabScarto2.Name = "LabScarto2"
-        Me.LabScarto2.Size = New System.Drawing.Size(29, 13)
-        Me.LabScarto2.TabIndex = 253
-        Me.LabScarto2.Text = "M-P"
-        '
-        'LabScarto1
-        '
-        Me.LabScarto1.AutoSize = True
-        Me.LabScarto1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.LabScarto1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabScarto1.Location = New System.Drawing.Point(30, 29)
-        Me.LabScarto1.Name = "LabScarto1"
-        Me.LabScarto1.Size = New System.Drawing.Size(29, 13)
-        Me.LabScarto1.TabIndex = 252
-        Me.LabScarto1.Text = "M-P"
-        '
-        'LedScarto4
-        '
-        Me.LedScarto4.BackColor = System.Drawing.Color.Transparent
-        Me.LedScarto4.BlinkInterval = 500
-        Me.LedScarto4.Label = ""
-        Me.LedScarto4.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Top
-        Me.LedScarto4.LedColor = System.Drawing.Color.Purple
-        Me.LedScarto4.LedSize = New System.Drawing.SizeF(12.0!, 12.0!)
-        Me.LedScarto4.Location = New System.Drawing.Point(15, 80)
-        Me.LedScarto4.Name = "LedScarto4"
-        Me.LedScarto4.Renderer = Nothing
-        Me.LedScarto4.Size = New System.Drawing.Size(15, 15)
-        Me.LedScarto4.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off
-        Me.LedScarto4.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular
-        Me.LedScarto4.TabIndex = 245
-        '
-        'LedScarto3
-        '
-        Me.LedScarto3.BackColor = System.Drawing.Color.Transparent
-        Me.LedScarto3.BlinkInterval = 500
-        Me.LedScarto3.Label = ""
-        Me.LedScarto3.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Top
-        Me.LedScarto3.LedColor = System.Drawing.Color.Purple
-        Me.LedScarto3.LedSize = New System.Drawing.SizeF(12.0!, 12.0!)
-        Me.LedScarto3.Location = New System.Drawing.Point(15, 63)
-        Me.LedScarto3.Name = "LedScarto3"
-        Me.LedScarto3.Renderer = Nothing
-        Me.LedScarto3.Size = New System.Drawing.Size(15, 15)
-        Me.LedScarto3.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off
-        Me.LedScarto3.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular
-        Me.LedScarto3.TabIndex = 244
-        '
-        'LedScarto2
-        '
-        Me.LedScarto2.BackColor = System.Drawing.Color.Transparent
-        Me.LedScarto2.BlinkInterval = 500
-        Me.LedScarto2.Label = ""
-        Me.LedScarto2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Top
-        Me.LedScarto2.LedColor = System.Drawing.Color.Purple
-        Me.LedScarto2.LedSize = New System.Drawing.SizeF(12.0!, 12.0!)
-        Me.LedScarto2.Location = New System.Drawing.Point(15, 46)
-        Me.LedScarto2.Name = "LedScarto2"
-        Me.LedScarto2.Renderer = Nothing
-        Me.LedScarto2.Size = New System.Drawing.Size(15, 15)
-        Me.LedScarto2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off
-        Me.LedScarto2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular
-        Me.LedScarto2.TabIndex = 243
-        '
-        'LedScarto1
-        '
-        Me.LedScarto1.BackColor = System.Drawing.Color.Transparent
-        Me.LedScarto1.BlinkInterval = 500
-        Me.LedScarto1.Label = ""
-        Me.LedScarto1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Top
-        Me.LedScarto1.LedColor = System.Drawing.Color.Purple
-        Me.LedScarto1.LedSize = New System.Drawing.SizeF(12.0!, 12.0!)
-        Me.LedScarto1.Location = New System.Drawing.Point(15, 29)
-        Me.LedScarto1.Name = "LedScarto1"
-        Me.LedScarto1.Renderer = Nothing
-        Me.LedScarto1.Size = New System.Drawing.Size(15, 15)
-        Me.LedScarto1.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off
-        Me.LedScarto1.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular
-        Me.LedScarto1.TabIndex = 242
-        '
         'Lab_Scarti
         '
         Me.Lab_Scarti.BackColor = System.Drawing.Color.Transparent
@@ -1821,22 +1842,34 @@ Partial Class Form_home
         Me.L_Barr.TabIndex = 194
         Me.L_Barr.Visible = False
         '
-        'GroupBox8
+        'lblLetturaDatamatrixPCB
         '
-        Me.GroupBox8.Controls.Add(Me.LedScarto1)
-        Me.GroupBox8.Controls.Add(Me.LedScarto2)
-        Me.GroupBox8.Controls.Add(Me.LedScarto3)
-        Me.GroupBox8.Controls.Add(Me.LedScarto4)
-        Me.GroupBox8.Controls.Add(Me.LabScarto1)
-        Me.GroupBox8.Controls.Add(Me.LabScarto2)
-        Me.GroupBox8.Controls.Add(Me.LabScarto3)
-        Me.GroupBox8.Controls.Add(Me.LabScarto4)
-        Me.GroupBox8.Location = New System.Drawing.Point(926, 26)
-        Me.GroupBox8.Name = "GroupBox8"
-        Me.GroupBox8.Size = New System.Drawing.Size(229, 105)
-        Me.GroupBox8.TabIndex = 279
-        Me.GroupBox8.TabStop = False
-        Me.GroupBox8.Text = "VASSOIO SCARTI"
+        Me.lblLetturaDatamatrixPCB.BackColor = System.Drawing.Color.Transparent
+        Me.lblLetturaDatamatrixPCB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblLetturaDatamatrixPCB.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLetturaDatamatrixPCB.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.lblLetturaDatamatrixPCB.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.lblLetturaDatamatrixPCB.ImageIndex = 0
+        Me.lblLetturaDatamatrixPCB.ImageList = Me.ImageList1
+        Me.lblLetturaDatamatrixPCB.Location = New System.Drawing.Point(6, 23)
+        Me.lblLetturaDatamatrixPCB.Name = "lblLetturaDatamatrixPCB"
+        Me.lblLetturaDatamatrixPCB.Size = New System.Drawing.Size(311, 56)
+        Me.lblLetturaDatamatrixPCB.TabIndex = 224
+        Me.lblLetturaDatamatrixPCB.Text = "ABILITAZIONE Lettura Datamatrix PCB"
+        Me.lblLetturaDatamatrixPCB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'GroupBox9
+        '
+        Me.GroupBox9.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.GroupBox9.Controls.Add(Me.lblLetturaDatamatrixPCB)
+        Me.GroupBox9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.GroupBox9.Location = New System.Drawing.Point(3, 704)
+        Me.GroupBox9.Name = "GroupBox9"
+        Me.GroupBox9.Size = New System.Drawing.Size(323, 96)
+        Me.GroupBox9.TabIndex = 280
+        Me.GroupBox9.TabStop = False
+        Me.GroupBox9.Text = "DATI MACCHINA"
         '
         'Form_home
         '
@@ -1862,13 +1895,14 @@ Partial Class Form_home
         Me.GroupBox4.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.GroupBox8.ResumeLayout(False)
+        Me.GroupBox8.PerformLayout()
         Me.GroupBox7.ResumeLayout(False)
         Me.GroupBox7.PerformLayout()
         Me.GroupBox6.ResumeLayout(False)
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox5.PerformLayout()
-        Me.GroupBox8.ResumeLayout(False)
-        Me.GroupBox8.PerformLayout()
+        Me.GroupBox9.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -1993,4 +2027,6 @@ Partial Class Form_home
     Friend WithEvents Label18 As Label
     Friend WithEvents lblPlasmaturaOn As LBSoft.IndustrialCtrls.Leds.LBLed
     Friend WithEvents GroupBox8 As GroupBox
+    Friend WithEvents GroupBox9 As GroupBox
+    Friend WithEvents lblLetturaDatamatrixPCB As Label
 End Class

@@ -455,6 +455,8 @@ Module Module1
         Public RichiestaLetturaDatamatrixPalletDx As Boolean
 
 
+        Public LetturaDatamatrixPcbAbilitato As Boolean
+
         'ANALOGICHE
         Public VuotoFrameSx As Integer  'VALORI IN MILLIBAR
         Public VuotoSupportoSx As Integer

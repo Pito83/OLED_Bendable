@@ -29,6 +29,8 @@ Public Class Form_sinottico
     Private _quadratoBlu As Integer = 3
     Private _quadratoGrigio As Integer = 1
 
+    Private _datiCaricati As Boolean
+
     Public Sub SetSide(ByVal side As PalletSide, Optional internal As Boolean = False)
         lblSide.Text = If(side = PalletSide.Destro, "LEGGI PALLET DESTRO", "LEGGI PALLET SINISTRO")
         _side = side
@@ -168,6 +170,7 @@ Public Class Form_sinottico
                 Next
             End If
             Init_VitiDX()
+            _datiCaricati = True
         Catch ex As Exception
             show_eccezione(ex)
             Return False
@@ -347,8 +350,9 @@ Public Class Form_sinottico
     End Sub
 
     Private Function Vis_VitiSX() As Boolean
-        'TODO COMPLETARE
-        Dim _toll As Boolean = False 'stati(65) 'TODO COMPLETARE
+        If Not _datiCaricati Then
+            Return False
+        End If
         Try
             '''*****************************************
             ''' 0 - Lontano 
@@ -555,7 +559,9 @@ Public Class Form_sinottico
     End Sub
 
     Private Function Vis_VitiDX() As Boolean
-
+        If Not _datiCaricati Then
+            Return False
+        End If
         Try
             '''*****************************************
             ''' 0 - Lontano 

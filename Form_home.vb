@@ -327,9 +327,9 @@
         ElseIf (StatiMacchina.PresenzaPezzoIncollaggio = 1) Then
             LbLed_OledIncollaggio.LedColor = Color.Olive
         ElseIf (StatiMacchina.PresenzaPezzoIncollaggio = 2) Then
-            LbLed_OledIncollaggio.LedColor = Color.Red
-        ElseIf (StatiMacchina.PresenzaPezzoIncollaggio = 3) Then
             LbLed_OledIncollaggio.LedColor = Color.Lime
+        ElseIf (StatiMacchina.PresenzaPezzoIncollaggio = 3) Then
+            LbLed_OledIncollaggio.LedColor = Color.Red
         End If
 
         If StatiMacchina.IncollaggioPompaVuotoOledDxFatto Then
@@ -348,6 +348,16 @@
         'INCOLLAGGIO E MANO ROBOT VUOTO
         lblIncollaggioPres.Text = (CDbl(StatiMacchina.VuotoIncollaggio) / 1000).ToString("0.000")
         lblManoRobotPress.Text = (CDbl(StatiMacchina.VuotoManoDiPresa) / 1000).ToString("0.000")
+
+
+        lblLetturaDatamatrixPCB.Enabled = Log_1
+        If (StatiMacchina.LetturaDatamatrixPcbAbilitato) Then
+            lblLetturaDatamatrixPCB.ImageIndex = 0
+        Else
+            lblLetturaDatamatrixPCB.ImageIndex = 1
+        End If
+
+
     End Sub
 #End Region
 
@@ -408,5 +418,10 @@
 
     Private Sub L_PosaggioSx_Click(sender As Object, e As EventArgs) Handles L_PosaggioSx.Click
 
+    End Sub
+
+    Private Sub lblLetturaDatamatrixPCB_Click(sender As Object, e As EventArgs) Handles lblLetturaDatamatrixPCB.Click
+        Num_Dato = 3
+        Wr_Bool = Not StatiMacchina.LetturaDatamatrixPcbAbilitato
     End Sub
 End Class
